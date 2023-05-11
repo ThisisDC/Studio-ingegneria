@@ -1,9 +1,8 @@
 .header {
-  position: fixed;
-  top: 0;
   width: 100%;
   background-color: rgb(255, 255, 255);
   padding: auto;
+  min-height: 5rem;
 }
 
 .logocontainer {
@@ -21,7 +20,9 @@
     margin: 0.3rem;
 }
 
-.logo:hover{
+.logo:hover,
+.logo:active
+{
     background-color: rgb(219, 222, 222);
 }
 

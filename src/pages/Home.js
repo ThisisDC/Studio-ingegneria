@@ -1,12 +1,25 @@
-import classes from './Home.module.css'
+import classes from "./Home.module.css";
 
 function HomePage() {
+  const buttonClickHandler = () => {};
+
   return (
     <div>
-      <div className={classes.imagecontainer}>
-        <img alt="Pannelli solari" src={require("../images/pannelli.png")}/>
-      </div>
-      <div></div>
+        {/* <img
+          alt="Pannelli solari"
+          className={classes.img}
+          src={require("../images/pannelli.png")}
+        /> */}
+        <div style={{backgroundImage: `url(${require("../images/pannelli.png")})`}} className={classes.imagecontainer}>
+          <div className={classes.imagetext}>
+            Il sole ti può fare risparmiare tantissimi soldi e anche abbronzarti!
+          </div>
+          <button onClick={buttonClickHandler} className={classes.imagebutton}>
+            Maggiori informazioni!
+          </button>
+        </div>
+        
+      <div className={classes.descriptionDiv}></div>
     </div>
   );
 }

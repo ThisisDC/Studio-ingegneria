@@ -1,4 +1,33 @@
 .imagecontainer{
-    width: 100%
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: border-box;
+    background-clip: border-box;
+}
 
+
+.imagetext{
+    left: 6rem;
+    color: white;
+    font-size: 2rem;
+    width: 24rem
+}
+
+.imagebutton{
+    right: 8rem;
+    height: 4rem;
+    width: 12rem;
+    border-radius: 10px;
+    border: none;
+}
+
+.imagebutton:hover,
+.imagebutton:active{
+    background-color: rgb(219, 222, 222)
+}
+
+.descriptionDiv{
+    background-color: green;
+    height: 10rem;
+    width: 100%;
 }
