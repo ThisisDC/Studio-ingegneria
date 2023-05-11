@@ -14,8 +14,9 @@ function MainHeader() {
       <div className={Classes.logocontainer}>
         <div className={Classes.logo} onClick={onLogoClickHandler}>
           <img alt="logo" src={require("../images/logo.png")} />
-          {isNavBarOpen && <HeaderMenu/>}
         </div>
+        {isNavBarOpen && <HeaderMenu/>}
+
       </div>
     </header>
   );
