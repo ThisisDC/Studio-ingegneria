@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/thisisdc.github.io/Template-website/static/css/main.727379f7.css",
-    "main.js": "/thisisdc.github.io/Template-website/static/js/main.b8c2651f.js",
-    "static/media/pannelli.png": "/thisisdc.github.io/Template-website/static/media/pannelli.1059900d6e174baedda7.png",
-    "static/media/logo.png": "/thisisdc.github.io/Template-website/static/media/logo.36608c78b84d0058d4f6.png",
-    "index.html": "/thisisdc.github.io/Template-website/index.html",
-    "main.727379f7.css.map": "/thisisdc.github.io/Template-website/static/css/main.727379f7.css.map",
-    "main.b8c2651f.js.map": "/thisisdc.github.io/Template-website/static/js/main.b8c2651f.js.map"
+    "main.css": "/Template-website/static/css/main.134a7225.css",
+    "main.js": "/Template-website/static/js/main.8013f9f8.js",
+    "static/media/pannelli.png": "/Template-website/static/media/pannelli.1059900d6e174baedda7.png",
+    "static/media/logo.png": "/Template-website/static/media/logo.36608c78b84d0058d4f6.png",
+    "index.html": "/Template-website/index.html",
+    "main.134a7225.css.map": "/Template-website/static/css/main.134a7225.css.map",
+    "main.8013f9f8.js.map": "/Template-website/static/js/main.8013f9f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.727379f7.css",
-    "static/js/main.b8c2651f.js"
+    "static/css/main.134a7225.css",
+    "static/js/main.8013f9f8.js"
   ]
 }
