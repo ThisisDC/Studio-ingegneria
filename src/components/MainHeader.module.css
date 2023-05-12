@@ -1,31 +1,80 @@
-.header {
+header {
   width: 100%;
   background-color: rgb(255, 255, 255);
   padding: auto;
-  min-height: 5rem;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .logocontainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.logo{
-    width: 5rem;
-    height: 5rem;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0.3rem;
+.logo {
+  width: auto;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.3rem;
+  user-select: none;
 }
 
 .logo:hover,
-.logo:active
-{
-    background-color: rgb(219, 222, 222);
+.logo:active,
+.menuIcon:hover,
+.menuIcon:active {
+  background-color: rgb(219, 222, 222);
 }
 
 img {
-    height: 70%;
+  height: 70%;
 }
+
+.menuActived {
+  background-color: rgb(219, 222, 222);
+}
+
+.menuIcon {
+  top: 20%;
+  position: absolute;
+  left: 2%;
+  padding: 5px;
+  border-radius: 7px;
+}
+
+.menuIcon div {
+  width: 6vw;
+  min-width: 30.47px;
+  max-width: 37.7px;
+  height: 4.81px;
+  background-color: black;
+  margin: 3px 0;
+  border-radius: 8px;
+}
+
+.contactsnav {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(47, 46, 46);
+  color: white;
+}
+
+.numberMail {
+  margin: 0.6rem;
+}
+
+.socialLinks {
+  margin-top: 0.6rem;
+}
+
+.socialLinks a {
+  margin-right: 1rem;
+  color: white;
+}
+
