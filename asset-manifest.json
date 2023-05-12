@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/thisisdc.github.io/Template-website/static/css/main.727379f7.css",
+    "main.js": "/thisisdc.github.io/Template-website/static/js/main.b8c2651f.js",
+    "static/media/pannelli.png": "/thisisdc.github.io/Template-website/static/media/pannelli.1059900d6e174baedda7.png",
+    "static/media/logo.png": "/thisisdc.github.io/Template-website/static/media/logo.36608c78b84d0058d4f6.png",
+    "index.html": "/thisisdc.github.io/Template-website/index.html",
+    "main.727379f7.css.map": "/thisisdc.github.io/Template-website/static/css/main.727379f7.css.map",
+    "main.b8c2651f.js.map": "/thisisdc.github.io/Template-website/static/js/main.b8c2651f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.727379f7.css",
+    "static/js/main.b8c2651f.js"
+  ]
+}
