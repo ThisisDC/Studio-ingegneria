@@ -2,9 +2,9 @@ header {
   width: 100%;
   background-color: rgb(255, 255, 255);
   padding: auto;
-  position: sticky;
   top: 0;
   z-index: 3;
+  position: relative;
 }
 
 .logocontainer {
@@ -78,4 +78,3 @@ img {
   margin-right: 1rem;
   color: white;
 }
-

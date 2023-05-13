@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/Home';
 import ErrorPage from './pages/Error';
 import RootLayout from './pages/Root';

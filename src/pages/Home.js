@@ -42,19 +42,19 @@ function HomePage() {
           <div className={classes.section}>
             <div className={classes.circle}></div>
             <p className={classes.circleDesc}>
-              Prova Prova Prova Prova Prova Prova Prova Prova
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l
             </p>
           </div>
           <div className={classes.section}>
             <div className={classes.circle}></div>
             <p className={classes.circleDesc}>
-              Prova Prova Prova Prova Prova Prova Prova Prova
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l
             </p>
           </div>
           <div className={classes.section}>
             <div className={classes.circle}></div>
             <p className={classes.circleDesc}>
-              Prova Prova Prova Prova Prova Prova Prova Prova
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco l
             </p>
           </div>
         </div>

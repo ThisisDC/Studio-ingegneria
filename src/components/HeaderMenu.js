@@ -15,13 +15,13 @@ function HeaderMenu(props) {
 
         <ul className={classes.list}>
           <NavLink to="/" onClick={onNavLinkClick}>
-            <li>Home</li>
+            <li>HOME</li>
           </NavLink>
           <NavLink to="chi-siamo" onClick={onNavLinkClick}>
-            <li>Chi siamo</li>
+            <li>CHI SIAMO</li>
           </NavLink>
           <NavLink to="progetti" onClick={onNavLinkClick}>
-            <li>Progetti</li>
+            <li>PROGETTI</li>
           </NavLink>
         </ul>
       </div>

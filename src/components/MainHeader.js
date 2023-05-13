@@ -14,11 +14,11 @@ function MainHeader(props) {
           +39 328 178 9139 | caldarigic@gmail.com
         </p>
         <div className={Classes.socialLinks}>
-          <a href="https://www.facebook.com/" class="fa fa-facebook"> </a>
-          <a href="https://www.instagram.com/" class="fa fa-instagram"> </a>
-          <a href="https://twitter.com/home" class="fa fa-twitter"> </a>
-          <a href="https://www.google.com/" class="fa fa-google"> </a>
-          <a href="https://www.skype.com/it/" class="fa fa-skype"> </a>
+          <a href="https://www.facebook.com/" className="fa fa-facebook"> </a>
+          <a href="https://www.instagram.com/" className="fa fa-instagram"> </a>
+          <a href="https://twitter.com/home" className="fa fa-twitter"> </a>
+          <a href="https://www.google.com/" className="fa fa-google"> </a>
+          <a href="https://www.skype.com/it/" className="fa fa-skype"> </a>
 
         </div>
       </div>

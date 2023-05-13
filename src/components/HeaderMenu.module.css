@@ -1,26 +1,32 @@
 .menu {
-  background-color: rgba(246, 246, 246, 0.923);
+  background-color: rgb(246, 246, 246);
   position: fixed;
-  width: 60%;
+  width: 16rem;
   height: 100%;
   z-index: 4;
   display: flex;
-  justify-content: center;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  flex-direction: column;
+  /* border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px; */
 }
 
 .list {
   user-select: none;
   list-style-type: none;
-  margin-top: 7.5rem;
-  margin-right: 40px;
+
 }
 
 li {
+  text-align: end;
   margin-top: 20px;
-  font-size: 2rem;
+  margin-right: 3rem;
+  font-size: 1.2rem;
   color: rgb(26, 26, 26);
+  padding: 5px;
+}
+
+li:hover {
+  background-color: rgb(207, 207, 207);
 }
 
 .x {
@@ -32,10 +38,10 @@ li {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+  margin-left: 0.2rem;
+  margin-top: 5.7rem;
 }
 
 .x:hover {
-  background-color: rgb(8, 135, 135);
   background-color: rgb(167, 166, 166);
-
 }

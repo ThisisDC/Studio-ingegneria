@@ -71,20 +71,30 @@ p {
 }
 
 .circlesDiv {
-  display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 2rem 0;
 }
 
+.circlesDiv div{
+  margin: 0 1.5rem;
+  margin: auto;
+}
+
 .circle {
+  height: 50vw;
+  width: 50vw;
+  max-width: 170px;
+  max-height: 170px;
   background-color: white;
-  height: 23vw;
-  width: 23vw;
   border-radius: 50%;
+  margin: auto;
 }
 
 .circleDesc {
-  width: 23vw;
+  width: 40vw;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .newsLetterSection {
