@@ -66,8 +66,9 @@ img {
 }
 
 .numberMail {
-  margin: 0.6rem;
+  margin: 0.5rem 3rem;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 .socialLinks {

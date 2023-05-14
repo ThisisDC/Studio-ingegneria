@@ -4,6 +4,7 @@
   width: 16rem;
   height: 100%;
   z-index: 4;
+  box-shadow: 0 0 10px #85888c;
   display: flex;
   flex-direction: column;
   /* border-top-right-radius: 8px;
@@ -13,7 +14,6 @@
 .list {
   user-select: none;
   list-style-type: none;
-
 }
 
 li {
@@ -23,6 +23,7 @@ li {
   font-size: 1.2rem;
   color: rgb(26, 26, 26);
   padding: 5px;
+  transition-delay: 2s;
 }
 
 li:hover {

@@ -1,0 +1,119 @@
+#slide1 {
+  background-image: url("../images/pannelli.png");
+}
+
+#slide2 {
+  background-image: url("../images/pompa-di-calore.jpg");
+}
+
+#slide3 {
+  background-image: url("../images/pale-eoliche.png");
+}
+
+.slideShow {
+  position: relative;
+}
+
+.imagecontainer {
+  display: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  min-height: 300px;
+  height: 62.9vw;
+  position: relative;
+  justify-content: center;
+  align-items: end;
+  /* display: flex; */
+}
+
+.imagetext {
+  color: white;
+  font-style: italic;
+  width: 100%;
+  font-size: 1.2rem;
+  background-color: rgba(29, 28, 28, 0.668);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.imagebutton {
+  width: 6rem;
+  height: 2rem;
+  max-height: 50px;
+  max-width: 200px;
+  border: none;
+  font-size: 0.7rem;
+  background-color: rgb(23, 80, 237);
+  color: azure;
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+#button1,
+#button2 {
+    display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -40px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2;
+  border: none;
+  background-color: transparent;
+
+}
+
+#button1{
+    left: 0
+}
+
+#button2{
+    right: 0;
+}
+
+#button1:hover,
+#button2:hover {
+  background-color: rgba(255, 255, 255, 0.613);
+  color: black;
+
+}
+
+.imagebutton:hover,
+.imagebutton:active {
+  background-color: rgb(42, 149, 255);
+  cursor: pointer;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .6}
+  to {opacity: 1}
+}
+
+@media (min-width: 890px) {
+    .imagecontainer {
+      background: none;
+      background-position: top;
+    }
+
+    #button1,
+    #button2{
+        display: block;
+    }
+  }
