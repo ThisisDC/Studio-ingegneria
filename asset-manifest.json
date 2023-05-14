@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Template-website/static/css/main.409d226b.css",
+    "main.css": "/Template-website/static/css/main.3c05008a.css",
     "main.js": "/Template-website/static/js/main.385a12f8.js",
     "static/media/pannelli.png": "/Template-website/static/media/pannelli.1059900d6e174baedda7.png",
     "static/media/logo.png": "/Template-website/static/media/logo.36608c78b84d0058d4f6.png",
     "index.html": "/Template-website/index.html",
-    "main.409d226b.css.map": "/Template-website/static/css/main.409d226b.css.map",
+    "main.3c05008a.css.map": "/Template-website/static/css/main.3c05008a.css.map",
     "main.385a12f8.js.map": "/Template-website/static/js/main.385a12f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.409d226b.css",
+    "static/css/main.3c05008a.css",
     "static/js/main.385a12f8.js"
   ]
 }
