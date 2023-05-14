@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c55b036f.css",
-    "main.js": "/static/js/main.3d597f43.js",
-    "static/media/pannelli.png": "/static/media/pannelli.1059900d6e174baedda7.png",
-    "static/media/logo.png": "/static/media/logo.36608c78b84d0058d4f6.png",
-    "index.html": "/index.html",
-    "main.c55b036f.css.map": "/static/css/main.c55b036f.css.map",
-    "main.3d597f43.js.map": "/static/js/main.3d597f43.js.map"
+    "main.css": "/Template-website/static/css/main.1f1b1607.css",
+    "main.js": "/Template-website/static/js/main.385a12f8.js",
+    "static/media/pannelli.png": "/Template-website/static/media/pannelli.1059900d6e174baedda7.png",
+    "static/media/logo.png": "/Template-website/static/media/logo.36608c78b84d0058d4f6.png",
+    "index.html": "/Template-website/index.html",
+    "main.1f1b1607.css.map": "/Template-website/static/css/main.1f1b1607.css.map",
+    "main.385a12f8.js.map": "/Template-website/static/js/main.385a12f8.js.map"
   },
   "entrypoints": [
-    "static/css/main.c55b036f.css",
-    "static/js/main.3d597f43.js"
+    "static/css/main.1f1b1607.css",
+    "static/js/main.385a12f8.js"
   ]
 }
