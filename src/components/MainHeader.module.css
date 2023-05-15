@@ -28,9 +28,9 @@ div img {
 
 .logo:hover,
 .logo:active {
-  box-shadow: rgba(51, 245, 26, 0.25) 0px 54px 55px,
-    rgba(51, 245, 26, 0.12) 0px -12px 30px, rgba(51, 245, 26, 0.12) 0px 4px 6px,
-    rgba(51, 245, 26, 0.17) 0px 12px 13px, rgba(51, 245, 26, 0.09) 0px -3px 5px;
+  box-shadow: rgba(150,211,87, 0.25) 0px 54px 55px,
+    rgba(150,211,87, 0.12) 0px -12px 30px, rgba(150,211,87, 0.12) 0px 4px 6px,
+    rgba(150,211,87, 0.17) 0px 12px 13px, rgba(150,211,87, 0.09) 0px -3px 5px;
 }
 
 .menuIcon:hover,
@@ -59,7 +59,7 @@ img {
   min-width: 30.47px;
   max-width: 37.7px;
   height: 4.81px;
-  background-color: black;
+  background-color: rgba(83, 168, 3, 0.762);
   margin: 3px 0;
   border-radius: 8px;
 }

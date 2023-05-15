@@ -99,6 +99,8 @@ p {
   border-radius: 0.15em;
   transform: translateY(-0.075em);
   align-self: center;
+  position: relative;
+  bottom: -2px;
 }
 
 .checkboxSection {

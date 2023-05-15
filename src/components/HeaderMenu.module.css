@@ -27,7 +27,7 @@
 li {
   text-align: end;
   margin-top: 20px;
-  margin-right: 3rem;
+  margin-right: 3.5rem;
   font-size: 1.2rem;
   color: rgb(26, 26, 26);
   padding: 5px;
@@ -53,4 +53,50 @@ li:hover {
 
 .x:hover {
   background-color: rgb(219, 222, 222);
+}
+
+.fade-slide-enter {
+
+}
+
+.fade-slide-enter-active {
+    animation: openModal 0.4s ease-out forwards;
+}
+
+.fade-slide-exit {
+
+}
+
+.fade-slide-exit-active {
+    animation: closeModal 1s ease-out forwards;
+}
+
+@keyframes openModal {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(90%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes closeModal {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateX(60%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
 }

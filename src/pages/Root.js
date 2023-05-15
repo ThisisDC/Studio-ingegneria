@@ -22,7 +22,7 @@ function RootLayout() {
         <LoadingOverlay />
       ) : (
         <>
-          {isNavBarOpen && <HeaderMenu onLinkClick={onMenuClickHandler} />}
+          <HeaderMenu onLinkClick={onMenuClickHandler} isNavOpen={isNavBarOpen} />
           <MainHeader
             onMenuButtonClick={onMenuClickHandler}
             isNavOpen={isNavBarOpen}

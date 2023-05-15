@@ -19,7 +19,6 @@ function SlideShowEngine(n) {
 
 const plusSlide = (n) => {
   SlideShowEngine(slideIndex += n);
-  console.log("change");
 };
 
 function Slideshow() {

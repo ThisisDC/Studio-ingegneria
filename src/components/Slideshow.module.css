@@ -56,7 +56,7 @@
 
 #button1,
 #button2 {
-    display: none;
+  display: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -72,22 +72,20 @@
   z-index: 2;
   border: none;
   background-color: transparent;
-
 }
 
-#button1{
-    left: 0
+#button1 {
+  left: 0;
 }
 
-#button2{
-    right: 0;
+#button2 {
+  right: 0;
 }
 
 #button1:hover,
 #button2:hover {
   background-color: rgba(255, 255, 255, 0.613);
   color: black;
-
 }
 
 .imagebutton:hover,
@@ -96,24 +94,28 @@
   cursor: pointer;
 }
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+/* .fade {
+  animation-name: slide-in;
+  animation-duration: 1s;
 }
 
-@keyframes fade {
-  from {opacity: .6}
-  to {opacity: 1}
-}
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+} */
 
 @media (min-width: 890px) {
-    .imagecontainer {
-      background: none;
-      background-position: top;
-    }
-
-    #button1,
-    #button2{
-        display: block;
-    }
+  .imagecontainer {
+    background: none;
+    background-position: top;
   }
+
+  #button1,
+  #button2 {
+    display: block;
+  }
+}

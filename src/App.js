@@ -1,4 +1,4 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom';
 import HomePage from './pages/Home';
 import ErrorPage from './pages/Error';
 import RootLayout from './pages/Root';
@@ -8,7 +8,7 @@ import ProjectsPage from './pages/Projects';
 
 function App() {
   //use createHashRouter for github!
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <RootLayout />,
