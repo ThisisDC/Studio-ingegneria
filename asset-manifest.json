@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Template-website/static/css/main.e3f7e99f.css",
-    "main.js": "/Template-website/static/js/main.9fc2294f.js",
+    "main.css": "/Template-website/static/css/main.6ac56cd9.css",
+    "main.js": "/Template-website/static/js/main.0f2294e9.js",
     "static/media/pannelli.png": "/Template-website/static/media/pannelli.1059900d6e174baedda7.png",
     "static/media/pale-eoliche.png": "/Template-website/static/media/pale-eoliche.cac9680cbfddc68fd9c9.png",
     "static/media/pompa-di-calore.jpg": "/Template-website/static/media/pompa-di-calore.551979c25f734cee874d.jpg",
     "static/media/logo.png": "/Template-website/static/media/logo.bd716ecbf95bc1e0bc17.png",
     "index.html": "/Template-website/index.html",
-    "main.e3f7e99f.css.map": "/Template-website/static/css/main.e3f7e99f.css.map",
-    "main.9fc2294f.js.map": "/Template-website/static/js/main.9fc2294f.js.map"
+    "main.6ac56cd9.css.map": "/Template-website/static/css/main.6ac56cd9.css.map",
+    "main.0f2294e9.js.map": "/Template-website/static/js/main.0f2294e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3f7e99f.css",
-    "static/js/main.9fc2294f.js"
+    "static/css/main.6ac56cd9.css",
+    "static/js/main.0f2294e9.js"
   ]
 }
