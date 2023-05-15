@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Template-website/static/css/main.e97ebc6d.css",
-    "main.js": "/Template-website/static/js/main.98a7830b.js",
-    "static/media/pannelli.png": "/Template-website/static/media/pannelli.1059900d6e174baedda7.png",
-    "static/media/pale-eoliche.png": "/Template-website/static/media/pale-eoliche.cac9680cbfddc68fd9c9.png",
-    "static/media/pompa-di-calore.jpg": "/Template-website/static/media/pompa-di-calore.551979c25f734cee874d.jpg",
-    "static/media/logo.png": "/Template-website/static/media/logo.bd716ecbf95bc1e0bc17.png",
-    "index.html": "/Template-website/index.html",
-    "main.e97ebc6d.css.map": "/Template-website/static/css/main.e97ebc6d.css.map",
-    "main.98a7830b.js.map": "/Template-website/static/js/main.98a7830b.js.map"
+    "main.css": "/Studio-ingegneria/static/css/main.d9de47f9.css",
+    "main.js": "/Studio-ingegneria/static/js/main.d17ca671.js",
+    "static/media/pannelli.png": "/Studio-ingegneria/static/media/pannelli.1059900d6e174baedda7.png",
+    "static/media/pale-eoliche.png": "/Studio-ingegneria/static/media/pale-eoliche.cac9680cbfddc68fd9c9.png",
+    "static/media/pompa-di-calore.jpg": "/Studio-ingegneria/static/media/pompa-di-calore.551979c25f734cee874d.jpg",
+    "static/media/logo.png": "/Studio-ingegneria/static/media/logo.bd716ecbf95bc1e0bc17.png",
+    "index.html": "/Studio-ingegneria/index.html",
+    "main.d9de47f9.css.map": "/Studio-ingegneria/static/css/main.d9de47f9.css.map",
+    "main.d17ca671.js.map": "/Studio-ingegneria/static/js/main.d17ca671.js.map"
   },
   "entrypoints": [
-    "static/css/main.e97ebc6d.css",
-    "static/js/main.98a7830b.js"
+    "static/css/main.d9de47f9.css",
+    "static/js/main.d17ca671.js"
   ]
 }
