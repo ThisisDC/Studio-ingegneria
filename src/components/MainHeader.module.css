@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: #f2f2f2;
   padding: auto;
   top: 0;
   z-index: 3;
@@ -12,19 +12,27 @@ header {
   justify-content: center;
 }
 
+div img {
+  border-radius: 50%;
+  width: 60px;
+  height: auto;
+}
+
 .logo {
-  width: auto;
-  height: 50px;
   border-radius: 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0.3rem;
   user-select: none;
+  margin: 5px auto;
 }
 
 .logo:hover,
-.logo:active,
+.logo:active {
+  box-shadow: rgba(51, 245, 26, 0.25) 0px 54px 55px,
+    rgba(51, 245, 26, 0.12) 0px -12px 30px, rgba(51, 245, 26, 0.12) 0px 4px 6px,
+    rgba(51, 245, 26, 0.17) 0px 12px 13px, rgba(51, 245, 26, 0.09) 0px -3px 5px;
+}
+
 .menuIcon:hover,
 .menuIcon:active {
   background-color: rgb(219, 222, 222);
@@ -76,6 +84,7 @@ img {
 }
 
 .socialLinks a {
-  margin-right: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   color: white;
 }

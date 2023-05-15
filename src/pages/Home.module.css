@@ -44,6 +44,7 @@ p {
   margin: auto;
   margin-bottom: 2rem;
   margin-top: 1rem;
+   font-size: 14px;
 }
 
 .newsLetterSection {
@@ -78,10 +79,10 @@ p {
   width: 6rem;
   height: 2.2rem;
   margin: auto;
-  margin-bottom: 2rem;
   border-radius: 10px;
   border: none;
   font-size: 1rem;
+  margin-bottom: 2rem;
 }
 
 .newsLetterSection input[type="submit"]:hover {
@@ -89,6 +90,7 @@ p {
 }
 
 .newsLetterSection input[type="checkbox"] {
+  align-self: center;
   font: inherit;
   color: currentColor;
   width: 1.15em;
@@ -103,11 +105,13 @@ p {
   display: flex;
   justify-content: center;
   border-radius: 8px;
-  margin: 0.4rem auto;
+  margin: 0.7rem auto;
 }
 
 .checkboxSection p {
-  margin-right: 1rem;
-  font-size: 1rem;
+  font-size: 14px;
   color: white;
+  margin: auto;
+  margin-right: 0.3rem;
+
 }
