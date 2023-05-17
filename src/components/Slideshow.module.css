@@ -1,57 +1,183 @@
-#slide1 {
+/* #slide1 {
   background-image: url("../images/pannelli.png");
 }
-
 #slide2 {
   background-image: url("../images/pompa-di-calore.jpg");
 }
-
 #slide3 {
   background-image: url("../images/pale-eoliche.png");
 }
-
 .slideShow {
+  width: 100%;
   position: relative;
+  display: flex; 
 }
-
-.imagecontainer {
-  display: none;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.imageFrame {
+  position: relative;
+  width: 100%;
   width: 100%;
   min-height: 300px;
   height: 62.9vw;
-  position: relative;
-  justify-content: center;
-  align-items: end;
-  /* display: flex; */
 }
-
-.imagetext {
+.imagecontainer {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+  height: 62.9vw;
+}
+.paragraph {
+  position: absolute;
   color: white;
   font-style: italic;
-  width: 100%;
-  font-size: 1.2rem;
   background-color: rgba(29, 28, 28, 0.668);
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
-  padding: 1.5rem;
+  bottom: 0;
+  width: 100%;
+}
+.imagetext {
+  font-size: 1.2rem;
   display: flex;
   flex-direction: column;
+  margin-top: 1rem;
+  text-align: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  align-items: center;
 }
-
 .imagebutton {
+  margin-top: 0.8rem;
   width: 6rem;
   height: 2rem;
   max-height: 50px;
   max-width: 200px;
   border: none;
   font-size: 0.7rem;
-  background-color: rgb(23, 80, 237);
+  background-color: rgb(17, 159, 26);
+  border-radius: 5px;
   color: azure;
-  margin: auto;
-  margin-top: 0.5rem;
+  margin-bottom: 1rem; 
+}
+.imagebutton:hover,
+.imagebutton:active {
+  background-color: rgb(20, 183, 31);
+  cursor: pointer; 
+}
+#button1,
+#button2 {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -40px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2;
+  border: none;
+  background-color: transparent;
+}
+#button1 {
+  left: 0;
+}
+#button2 {
+  right: 0;
+}
+#button1:hover,
+#button2:hover {
+  background-color: rgba(255, 255, 255, 0.613);
+  color: black;
+} */
+
+
+#slide0 {
+  background-image: url("../images/pannelli.png");
+}
+
+#slide1 {
+  background-image: url("../images/pompa-di-calore.jpg");
+}
+
+#slide2 {
+  background-image: url("../images/pale-eoliche.png");
+}
+
+.slideShow {
+  width: 100%;
+  position: relative;
+  display: flex;
+
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  width: 100%;
+  min-height: 300px;
+  height: 62.9vw;
+}
+
+.imagecontainer {
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  min-height: 300px;
+  height: 62.9vw;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.paragraph{
+  position: absolute;
+  color: white;
+  font-style: italic;
+  background-color: rgba(29, 28, 28, 0.668);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  bottom: 0;
+  width: 100%;
+}
+
+.imagetext {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  text-align: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.imagebutton {
+  margin-top: 0.8rem;
+  width: 6rem;
+  height: 2rem;
+  max-height: 50px;
+  max-width: 200px;
+  border: none;
+  font-size: 0.7rem;
+  background-color: rgb(17, 159, 26);
+  border-radius: 5px;
+  color: azure;
+  margin-bottom: 1rem;
+
+}
+
+.imagebutton:hover,
+.imagebutton:active {
+  background-color: rgb(20, 183, 31);
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 #button1,
@@ -88,34 +214,121 @@
   color: black;
 }
 
+/* 
+#slide1 {
+  background-image: url("../images/pannelli.png");
+}
+
+#slide2 {
+  background-image: url("../images/pompa-di-calore.jpg");
+}
+
+#slide3 {
+  background-image: url("../images/pale-eoliche.png");
+}
+
+.slideShow {
+  width: 100%;
+  position: relative;
+  display: flex;
+
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  width: 100%;
+  min-height: 300px;
+  height: 62.9vw;
+}
+
+.imagecontainer {
+  display: flex;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  min-height: 300px;
+  height: 62.9vw;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.paragraph{
+  position: absolute;
+  color: white;
+  font-style: italic;
+  background-color: rgba(29, 28, 28, 0.668);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  bottom: 0;
+  width: 100%;
+}
+
+.imagetext {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  text-align: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  align-items: center;
+}
+
+.imagebutton {
+  margin-top: 0.8rem;
+  width: 6rem;
+  height: 2rem;
+  max-height: 50px;
+  max-width: 200px;
+  border: none;
+  font-size: 0.7rem;
+  background-color: rgb(17, 159, 26);
+  border-radius: 5px;
+  color: azure;
+  margin-bottom: 1rem;
+
+}
+
 .imagebutton:hover,
 .imagebutton:active {
-  background-color: rgb(42, 149, 255);
+  background-color: rgb(20, 183, 31);
   cursor: pointer;
+  transform: scale(1.1);
 }
 
-/* .fade {
-  animation-name: slide-in;
-  animation-duration: 1s;
+#button1,
+#button2 {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -40px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 2;
+  border: none;
+  background-color: transparent;
 }
 
-@keyframes slide-in {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
+#button1 {
+  left: 0;
+}
+
+#button2 {
+  right: 0;
+}
+
+#button1:hover,
+#button2:hover {
+  background-color: rgba(255, 255, 255, 0.613);
+  color: black;
 } */
 
-@media (min-width: 890px) {
-  .imagecontainer {
-    background: none;
-    background-position: top;
-  }
-
-  #button1,
-  #button2 {
-    display: block;
-  }
-}

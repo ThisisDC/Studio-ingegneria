@@ -9,28 +9,26 @@ function RootLayout() {
   const [isLoading, setIsLoading] = useState(true);
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
 
-  setTimeout(() => {
-    setIsLoading(false);
-  }, 1500);
-
   const onMenuClickHandler = () => {
     setIsNavBarOpen(!isNavBarOpen);
   };
+
+  const animationEndedHandler = () => {
+    setIsLoading(false);
+  };
   return (
     <>
-      {isLoading ? (
-        <LoadingOverlay />
-      ) : (
-        <>
-          <HeaderMenu onLinkClick={onMenuClickHandler} isNavOpen={isNavBarOpen} />
-          <MainHeader
-            onMenuButtonClick={onMenuClickHandler}
-            isNavOpen={isNavBarOpen}
-          />
-          <Outlet />
-          <Footer />
-        </>
-      )}
+      <LoadingOverlay
+        isLoading={isLoading}
+        setAnimationEnded={animationEndedHandler}
+      />
+      <HeaderMenu onLinkClick={onMenuClickHandler} isNavOpen={isNavBarOpen} />
+      <MainHeader
+        onMenuButtonClick={onMenuClickHandler}
+        isNavOpen={isNavBarOpen}
+      />
+      <Outlet />
+      <Footer />
     </>
   );
 }

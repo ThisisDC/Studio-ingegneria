@@ -1,7 +1,5 @@
-
-
 .descriptionDiv {
-  background-color: rgb(17, 159, 26);
+  background-color: rgb(5, 172, 47);
   width: 100%;
   color: white;
   display: flex;
@@ -34,9 +32,20 @@ p {
   width: 50vw;
   max-width: 170px;
   max-height: 170px;
-  background-color: white;
+  background-color:#359393;
   border-radius: 50%;
   margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  
+}
+
+.circle img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 10px;
+  right: 11px;
 }
 
 .circleDesc {
@@ -44,7 +53,13 @@ p {
   margin: auto;
   margin-bottom: 2rem;
   margin-top: 1rem;
-   font-size: 14px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  font-weight: 300;
+  padding: 0.5rem;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .newsLetterSection {
@@ -115,5 +130,4 @@ p {
   color: white;
   margin: auto;
   margin-right: 0.3rem;
-
 }

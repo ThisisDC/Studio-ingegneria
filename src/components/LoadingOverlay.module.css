@@ -33,7 +33,7 @@
 }
 
 .spin {
-  border: 5px solid #bdbcbcb7;
+  border: 5px solid #d0cdcdf0;
   border-top: 5px solid #4fcb03;
   border-bottom: 5px solid #4fcb03;
   border-radius: 50%;
@@ -53,9 +53,10 @@
   }
 }
 
-p {
+.block p {
   margin-top: 0;
   font-size: 22.45px;
   font-weight: 100;
   text-align: center;
+  color: rgb(5, 172, 47);
 }

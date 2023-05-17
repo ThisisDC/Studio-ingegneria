@@ -27,7 +27,13 @@ function HomePage() {
           <h1>Che cosa facciamo?</h1>
           <div className={classes.circlesDiv}>
             <div className={classes.section}>
-              <div className={classes.circle}></div>
+              <div className={classes.circle}>
+              <img
+                alt="descimg1"
+                src={require("../images/descimg1.png")}
+                draggable="false"
+              />
+              </div>
               <p className={classes.circleDesc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -35,7 +41,14 @@ function HomePage() {
               </p>
             </div>
             <div className={classes.section}>
-              <div className={classes.circle}></div>
+              <div className={classes.circle}>
+              <img
+                alt="descimg2"
+                src={require("../images/descimg2.png")}
+                draggable="false"
+              />
+              </div>
+              </div>
               <p className={classes.circleDesc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -43,7 +56,13 @@ function HomePage() {
               </p>
             </div>
             <div className={classes.section}>
-              <div className={classes.circle}></div>
+              <div className={classes.circle}>
+              <img
+                alt="descimg3"
+                src={require("../images/descimg3.png")}
+                draggable="false"
+              />
+              </div>
               <p className={classes.circleDesc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -74,7 +93,6 @@ function HomePage() {
             </form>
           </div>
         </div>
-      </div>
     </>
   );
 }

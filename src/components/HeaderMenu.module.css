@@ -47,56 +47,15 @@ li:hover {
   height: 3rem;
   border-radius: 50%;
   margin-left: 0.4rem;
-  margin-top: 6.2rem;
-  font-size: 2rem;
+  margin-top: 6.4rem;
+  font-size: 1.8rem;
+  padding-bottom: 1px;
+  padding-right: 1px;
+  padding-left: 1px;
+  box-shadow: none;
+  transition: box-shadow 100ms linear;
 }
 
 .x:hover {
-  background-color: rgb(219, 222, 222);
-}
-
-.fade-slide-enter {
-
-}
-
-.fade-slide-enter-active {
-    animation: openModal 0.4s ease-out forwards;
-}
-
-.fade-slide-exit {
-
-}
-
-.fade-slide-exit-active {
-    animation: closeModal 1s ease-out forwards;
-}
-
-@keyframes openModal {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(90%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes closeModal {
-    0% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-    50% {
-        opacity: 0.8;
-        transform: translateX(60%);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
