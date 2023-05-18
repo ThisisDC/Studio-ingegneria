@@ -29,6 +29,7 @@ function HomePage() {
             <div className={classes.section}>
               <div className={classes.circle}>
               <img
+                id={classes.descimg1}
                 alt="descimg1"
                 src={require("../images/descimg1.png")}
                 draggable="false"
@@ -43,6 +44,7 @@ function HomePage() {
             <div className={classes.section}>
               <div className={classes.circle}>
               <img
+                id={classes.descimg2}
                 alt="descimg2"
                 src={require("../images/descimg2.png")}
                 draggable="false"
@@ -58,6 +60,7 @@ function HomePage() {
             <div className={classes.section}>
               <div className={classes.circle}>
               <img
+                id={classes.descimg3}
                 alt="descimg3"
                 src={require("../images/descimg3.png")}
                 draggable="false"

@@ -1,6 +1,6 @@
 header {
   width: 100%;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2e4;
   padding: auto;
   top: 0;
   z-index: 2;
@@ -26,6 +26,8 @@ div img {
   user-select: none;
   margin: 5px auto;
   transition: box-shadow 0.3s linear;
+  background-color: #f2f2f2e4;
+
 }
 
 .logo p {
@@ -135,7 +137,8 @@ img {
 
 #IconInstagram:hover,
 #IconInstagram:active {
-  background: radial-gradient(
+  background-color: #bc318f;
+  /* background: radial-gradient(
       circle farthest-corner at 35% 90%,
       #fec564,
       transparent 50%
@@ -160,7 +163,7 @@ img {
       #e33f5f 50%,
       #f77638 70%,
       #fec66d 100%
-    );
+    ); */
 }
 
 #LinkInstagram {
@@ -177,25 +180,26 @@ img {
 #LinkTwitter {
   position: absolute;
   bottom: 3.6px;
-  right: 5.7px;
+  right: 5.3px;
 }
 
 #IconGoogle:hover,
 #IconGoogle:active {
-  background: conic-gradient(
+  background-color: #ea4335;
+  /* background: conic-gradient(
       from -45deg,
       #ea4335 110deg,
       #4285f4 90deg 180deg,
       #34a853 180deg 270deg,
       #fbbc05 270deg
     )
-    73% 55%/150% 150% no-repeat;
+    73% 55%/150% 150% no-repeat; */
 }
 
 #LinkGoogle {
   position: absolute;
   bottom: 3.6px;
-  right: 5.7px;
+  right: 6.1px;
 }
 
 #IconSkype:hover,

@@ -15,8 +15,8 @@
   box-shadow: 0 0 10px #85888c;
   display: flex;
   flex-direction: column;
-  /* border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px; */
+  /* transition: height 0.3s ease-out; */
+
 }
 
 .list {
