@@ -7,8 +7,6 @@ function HomePage() {
   const emailRef = useRef();
   const [isBoxChecked, setBoxChecked] = useState(false);
 
-
-
   const onSubmitNewsletter = (event) => {
     event.preventDefault();
     const email = emailRef.current.value;
@@ -28,12 +26,12 @@ function HomePage() {
           <div className={classes.circlesDiv}>
             <div className={classes.section}>
               <div className={classes.circle}>
-              <img
-                id={classes.descimg1}
-                alt="descimg1"
-                src={require("../images/descimg1.png")}
-                draggable="false"
-              />
+                <img
+                  id={classes.descimg1}
+                  alt="descimg1"
+                  src={require("../images/descimg1.png")}
+                  draggable="false"
+                />
               </div>
               <p className={classes.circleDesc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -43,13 +41,12 @@ function HomePage() {
             </div>
             <div className={classes.section}>
               <div className={classes.circle}>
-              <img
-                id={classes.descimg2}
-                alt="descimg2"
-                src={require("../images/descimg2.png")}
-                draggable="false"
-              />
-              </div>
+                <img
+                  id={classes.descimg2}
+                  alt="descimg2"
+                  src={require("../images/descimg2.png")}
+                  draggable="false"
+                />
               </div>
               <p className={classes.circleDesc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -59,12 +56,12 @@ function HomePage() {
             </div>
             <div className={classes.section}>
               <div className={classes.circle}>
-              <img
-                id={classes.descimg3}
-                alt="descimg3"
-                src={require("../images/descimg3.png")}
-                draggable="false"
-              />
+                <img
+                  id={classes.descimg3}
+                  alt="descimg3"
+                  src={require("../images/descimg3.png")}
+                  draggable="false"
+                />
               </div>
               <p className={classes.circleDesc}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -96,6 +93,7 @@ function HomePage() {
             </form>
           </div>
         </div>
+      </div>
     </>
   );
 }

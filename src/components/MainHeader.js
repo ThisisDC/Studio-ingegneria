@@ -1,6 +1,6 @@
 import classes from "./MainHeader.module.css";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { NavLink } from "react-router-dom";
 
 function MainHeader(props) {
   const onMenuClickHandler = () => {
@@ -71,6 +71,17 @@ function MainHeader(props) {
               <p>STUDIO INGEGNERIA CALDARIGI</p>
             </div>
           </Link>
+        </div>
+        <div className={classes.desktopmenu}>
+          <NavLink to="progetti">
+            <li>PROGETTI</li>
+          </NavLink>
+          <NavLink to="chi-siamo">
+            <li>CHI SIAMO</li>
+          </NavLink>
+          <NavLink to="chi-siamo">
+            <li>DOVE SIAMO</li>
+          </NavLink>
         </div>
       </header>
     </>

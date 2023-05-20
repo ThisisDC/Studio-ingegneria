@@ -36,13 +36,13 @@ function HeaderMenu(props) {
             </div>
             <ul className={classes.list} ref={ul}>
               <NavLink to="/" onClick={onNavCloseRequest}>
-                <li>HOME</li>
-              </NavLink>
-              <NavLink to="progetti" onClick={onNavCloseRequest}>
                 <li>PROGETTI</li>
               </NavLink>
-              <NavLink to="chi-siamo" onClick={onNavCloseRequest}>
+              <NavLink to="progetti" onClick={onNavCloseRequest}>
                 <li>CHI SIAMO</li>
+              </NavLink>
+              <NavLink to="chi-siamo" onClick={onNavCloseRequest}>
+                <li>DOVE SIAMO</li>
               </NavLink>
             </ul>
           </motion.nav>

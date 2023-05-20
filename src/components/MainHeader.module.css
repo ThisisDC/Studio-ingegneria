@@ -26,14 +26,13 @@ div img {
   user-select: none;
   margin: 5px auto;
   transition: box-shadow 0.3s linear;
-  background-color: #f2f2f2e4;
-
+  background-color: #f2f2f2;
 }
 
 .logo p {
   font-size: 0.6rem;
   font-weight: 400;
-  color: rgb(5, 172, 47);
+  color: rgb(4, 172, 46);
   width: 70px;
   text-align: left;
   margin: 10px;
@@ -211,4 +210,72 @@ img {
   position: absolute;
   bottom: 3.6px;
   right: 5.7px;
+}
+
+.desktopmenu {
+  display: none;
+  list-style-type: none;
+}
+
+@media (min-width: 1000px) {
+  .contactsnav {
+    display: none;
+  }
+
+  .menuIcon {
+    display: none;
+
+  }
+
+  header {
+    background-color: transparent;
+    position: static;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    position: absolute;
+    box-shadow: none;
+
+  }
+
+  .logocontainer {
+    justify-content: flex-start;
+    margin-left: 3rem;
+  }
+
+  .logo{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; 
+   }
+
+  .desktopmenu {
+    margin: 5px 0;
+    height: 58px;
+    background-color: #f2f2f2;
+    margin-right: 2rem;
+    border-radius: 50px;
+    display: flex;
+    padding: 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px; 
+  }
+
+  a li{
+    height: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0 1rem;
+    color: rgb(5, 172, 47);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  transition: box-shadow 0.3s linear;
+  }
+
+  .desktopmenu li:hover {
+    background-color: #ebebeb;
+  box-shadow: rgba(150, 211, 87, 0.25) 0px 54px 55px,
+    rgba(150, 211, 87, 0.12) 0px -12px 30px,
+    rgba(150, 211, 87, 0.12) 0px 4px 6px, rgba(150, 211, 87, 0.17) 0px 12px 13px,
+    rgba(150, 211, 87, 0.09) 0px -3px 5px;
+  }
+  
 }

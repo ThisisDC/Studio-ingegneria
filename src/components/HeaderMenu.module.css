@@ -24,7 +24,7 @@
   list-style-type: none;
 }
 
-li {
+.list li {
   text-align: end;
   margin-top: 20px;
   margin-right: 3.5rem;
@@ -33,7 +33,7 @@ li {
   padding: 5px;
 }
 
-li:hover {
+.list li:hover {
   background-color: rgb(202, 199, 199);
 }
 
