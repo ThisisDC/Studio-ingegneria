@@ -14,6 +14,11 @@ function HomePage() {
   const smallerDiv1 = useRef();
   const smallerDiv2 = useRef();
 
+  const closeAllModals = () => {
+    setIsMapOpen(false);
+    setIsBioOpen(false);
+  };
+
   const mapModalClickHandler = (event) => {
     setIsBioOpen(false);
     setIsMapOpen(true);
@@ -31,9 +36,28 @@ function HomePage() {
   const backdropClickHandler = () => {
     smallerDiv1.current.classList.remove(classes.modalOpen);
     smallerDiv2.current.classList.remove(classes.modalOpen);
-    setIsBioOpen(false);
-    setIsMapOpen(false);
+    closeAllModals()
   };
+
+  const deskopViewClickHandler = (event) => {
+    event.stopPropagation();
+
+    if (isMapOpen || isBioOpen) {
+      backdropClickHandler();
+    } else {
+      scrollToTop();
+    }
+  };
+
+  const modalDivClickHandler = (event) => {
+    if (isMapOpen || isBioOpen){
+      backdropClickHandler()
+    }
+    else{
+      event.stopPropagation()
+    }
+  }
+  
 
   // const [isAtTheTop, setIsAtTheTop] = useState(true);
   // const [isAtTheBottom, setIsAtTheBottom] = useState(false);
@@ -85,7 +109,7 @@ function HomePage() {
           </form>
         </div>
       </div>
-      <div className={classes.desktopView} onClick={backdropClickHandler}>
+      <div className={classes.desktopView} onClick={deskopViewClickHandler}>
         <div className={classes.mouseIcon}>
           <div className={classes.scrollDowns}>
             <div className={classes.mousey}>
@@ -94,7 +118,7 @@ function HomePage() {
           </div>
           <p>Scorri in basso!</p>
         </div>
-        <div className={classes.modalDiv}>
+        <div className={classes.modalDiv} onClick={modalDivClickHandler}>
           <SocialNav />
           <div className={classes.modalContent}>
             <CirclesDiv />
@@ -142,7 +166,25 @@ function HomePage() {
                       exercitation ullamco lorem ipsum dolor sit amet,
                       consectetur adipiscing elit, sed do eiusmod tempor
                       incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim veniam
+                      minim veniamLorem ipsum dolor sit amet, consectetur
+                      adipiscing elit, sed do eiusmod tempor incididunt ut
+                      labore et dolore magna aliqua. Ut enim ad minim veniam,
+                      quis nostrud exercitation ullamco lorem ipsum dolor sit
+                      amet, consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco lorem
+                      ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniamLorem ipsum dolor sit amet,
+                      consectetur adipiscing elit, sed do eiusmod tempor
+                      incididunt ut labore et dolore magna aliqua. Ut enim ad
+                      minim veniam, quis nostrud exercitation ullamco lorem
+                      ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                      eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                      ullamco lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit, sed do eiusmod tempor incididunt ut labore et dolore
+                      magna aliqua. Ut enim ad minim veniam
                     </p>
                   </div>
                 ) : (
