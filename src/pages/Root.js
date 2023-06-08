@@ -9,7 +9,6 @@ function RootLayout() {
   const [isLoading, setIsLoading] = useState(true);
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
 
-
   const onMenuClickHandler = () => {
     setIsNavBarOpen(!isNavBarOpen);
   };

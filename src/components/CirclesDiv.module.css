@@ -1,0 +1,123 @@
+.circlesDiv {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem;
+  padding-bottom: 0.7rem;
+  border-radius: 50px;
+  margin: 2rem;
+  background-color: none;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 12rem;
+  height: 12rem;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.circle img {
+  height: 100%;
+  width: 100%;
+}
+
+#descimg1 {
+  position: absolute;
+  top: -1px;
+  right: 0px;
+}
+
+#descimg2 {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+#descimg3 {
+  position: absolute;
+  top: 1px;
+  right: 0px;
+}
+
+.circleDesc {
+  width: 12rem;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+@media (min-width: 800px) {
+  .circlesDiv {
+    flex-direction: row;
+    background-color: #efefef;
+  }
+
+  .circle {
+    width: 11rem;
+    height: 11rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .circlesDiv {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: flex;
+    background-color: #ffffff88;
+    padding: 2rem;
+    width: 72%;
+    height: 25%;
+    border-radius: 50px;
+    z-index: 1;
+    transition: width 0.5s ease-out, height 0.5s ease-in,
+      background-color 0.5s ease-out;
+    margin: 2rem 0;
+  }
+
+  .circlesDiv:hover {
+    width: 74%;
+    background-color: #ffffffe2;
+  }
+
+  .circleDesc {
+    display: none;
+  }
+
+  .circle {
+    transition: box-shadow 0.5s ease;
+    width: 10rem;
+    height: 10rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .circle:hover,
+  .circle:active {
+    box-shadow: rgba(91, 237, 47, 0.948) 0px 5px 15px;
+  }
+
+  .circleBackdrop:hover {
+    background-color: rgba(222, 222, 222, 0.51);
+    height: 100%;
+    border-radius: 50%;
+  }
+}

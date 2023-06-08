@@ -1,11 +1,23 @@
 import classes from "./MainHeader.module.css";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
+import SocialNav from "./SocialNav";
+import { useEffect, useRef } from "react";
 
 function MainHeader(props) {
   const onMenuClickHandler = () => {
     props.onMenuButtonClick();
   };
+
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+  function scrollToBottom() {
+    window.scrollTo(0, window.innerHeight);
+  }
+
+
 
   return (
     <>
@@ -13,43 +25,7 @@ function MainHeader(props) {
         <p className={classes.numberMail}>
           +39 328 178 9139 | caldarigic@gmail.com
         </p>
-        <div className={classes.socialLinks}>
-          <a
-            id={classes.IconFacebook}
-            href="https://www.facebook.com/"
-            className={classes.link}
-          >
-            <div id={classes.LinkFacebook} className="fa fa-facebook"></div>
-          </a>
-          <a
-            id={classes.IconInstagram}
-            href="https://www.instagram.com/"
-            className={classes.link}
-          >
-            <div id={classes.LinkInstagram} className="fa fa-instagram"></div>
-          </a>
-          <a
-            id={classes.IconTwitter}
-            href="https://www.twitter.com/"
-            className={classes.link}
-          >
-            <div id={classes.LinkTwitter} className="fa fa-twitter"></div>
-          </a>
-          <a
-            id={classes.IconGoogle}
-            href="https://www.google.com/"
-            className={classes.link}
-          >
-            <div id={classes.LinkGoogle} className="fa fa-google"></div>
-          </a>
-          <a
-            id={classes.IconSkype}
-            href="https://www.skype.com/"
-            className={classes.link}
-          >
-            <div id={classes.LinkSkype} className="fa fa-skype"></div>
-          </a>
-        </div>
+        <SocialNav />
       </div>
       <header>
         <div className={classes.menuIcon} onClick={onMenuClickHandler}>
@@ -58,10 +34,7 @@ function MainHeader(props) {
           <div></div>
         </div>
         <div className={classes.logocontainer}>
-          <Link
-            to="/"
-            onClick={() => props.isNavBarOpen && onMenuClickHandler()}
-          >
+          <Link to="/" onClick={scrollToTop}>
             <div className={`${classes.logo}`}>
               <img
                 alt="logo"
@@ -72,17 +45,10 @@ function MainHeader(props) {
             </div>
           </Link>
         </div>
-        <div className={classes.desktopmenu}>
-          <NavLink to="progetti">
-            <li>PROGETTI</li>
-          </NavLink>
-          <NavLink to="chi-siamo">
-            <li>CHI SIAMO</li>
-          </NavLink>
-          <NavLink to="chi-siamo">
-            <li>DOVE SIAMO</li>
-          </NavLink>
-        </div>
+        <ul className={classes.desktopmenu}>
+          <li onClick={scrollToBottom}>DOVE SIAMO</li>
+          <li onClick={scrollToBottom}>CHI SIAMO</li>
+        </ul>
       </header>
     </>
   );
