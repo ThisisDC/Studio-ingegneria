@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Studio-ingegneria/static/css/main.eb7396ed.css",
-    "main.js": "/Studio-ingegneria/static/js/main.4f015d1b.js",
+    "main.css": "/Studio-ingegneria/static/css/main.8f22ddcb.css",
+    "main.js": "/Studio-ingegneria/static/js/main.2c4de1ef.js",
     "static/media/pannelli.png": "/Studio-ingegneria/static/media/pannelli.1059900d6e174baedda7.png",
     "static/media/dji_fly_20230521_182050_12_1684686059162_photo_optimized.jpg": "/Studio-ingegneria/static/media/dji_fly_20230521_182050_12_1684686059162_photo_optimized.dfdccd18bdab6bf86b78.jpg",
     "static/media/pale-eoliche.png": "/Studio-ingegneria/static/media/pale-eoliche.cac9680cbfddc68fd9c9.png",
@@ -11,11 +11,11 @@
     "static/media/descimg3.png": "/Studio-ingegneria/static/media/descimg3.eea4977817bee7fcd48b.png",
     "static/media/logo.png": "/Studio-ingegneria/static/media/logo.bd716ecbf95bc1e0bc17.png",
     "index.html": "/Studio-ingegneria/index.html",
-    "main.eb7396ed.css.map": "/Studio-ingegneria/static/css/main.eb7396ed.css.map",
-    "main.4f015d1b.js.map": "/Studio-ingegneria/static/js/main.4f015d1b.js.map"
+    "main.8f22ddcb.css.map": "/Studio-ingegneria/static/css/main.8f22ddcb.css.map",
+    "main.2c4de1ef.js.map": "/Studio-ingegneria/static/js/main.2c4de1ef.js.map"
   },
   "entrypoints": [
-    "static/css/main.eb7396ed.css",
-    "static/js/main.4f015d1b.js"
+    "static/css/main.8f22ddcb.css",
+    "static/js/main.2c4de1ef.js"
   ]
 }
