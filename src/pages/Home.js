@@ -8,15 +8,77 @@ function HomePage() {
   const [currentNewsletterInputValue, setCurrentNewsletterInputValue] =
     useState("");
 
+  const [isFirstCircleOpen, setIsFirstCircleOpen] = useState(false);
+  const [isSecondCircleOpen, setIsSecondCircleOpen] = useState(false);
+  const [isThirdCircleOpen, setIsThirdCircleOpen] = useState(false);
+  const [needArrowsToBeHided, setNeedArrowsToBeHided] = useState(false);
+
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isBioOpen, setIsBioOpen] = useState(false);
 
+  const [currentScrollStatus, setcurrentScrollStatus] = useState(0.8);
+
+  const circleDivModal = useRef();
   const smallerDiv1 = useRef();
   const smallerDiv2 = useRef();
 
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+  }, []);
+
+  function scrollHandler() {
+    if (!(window.innerWidth <= 1200)) {
+      let h = document.documentElement,
+        b = document.body,
+        st = "scrollTop",
+        sh = "scrollHeight";
+      let scrollValue =
+        0.8 - (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight);
+
+      getScrollPercent(scrollValue);
+    } else {
+      getScrollPercent(0.8);
+    }
+  }
+
+  function getScrollPercent(opacityValue) {
+    setcurrentScrollStatus(() => opacityValue);
+  }
+
+  function askToHideAllTheArrows() {
+    setNeedArrowsToBeHided(Math.random());
+  }
+
   const closeAllModals = () => {
+    setIsFirstCircleOpen(false);
+    setIsSecondCircleOpen(false);
+    setIsThirdCircleOpen(false);
+    askToHideAllTheArrows();
+    circleDivModal.current.classList.remove(classes.modalOpen);
+
     setIsMapOpen(false);
     setIsBioOpen(false);
+    smallerDiv1.current.classList.remove(classes.modalOpen);
+    smallerDiv2.current.classList.remove(classes.modalOpen);
+    smallerDiv2.current.style.position = "static";
+    smallerDiv1.current.style.position = "static";
+  };
+
+  const circlesDivClickHandler = (circleClicked) => {
+    circleDivModal.current.classList.add(classes.modalOpen);
+    if (circleClicked === "c1") {
+      setIsFirstCircleOpen(true);
+      setIsSecondCircleOpen(false);
+      setIsThirdCircleOpen(false);
+    } else if (circleClicked === "c2") {
+      setIsFirstCircleOpen(false);
+      setIsSecondCircleOpen(true);
+      setIsThirdCircleOpen(false);
+    } else if (circleClicked === "c3") {
+      setIsFirstCircleOpen(false);
+      setIsSecondCircleOpen(false);
+      setIsThirdCircleOpen(true);
+    }
   };
 
   const mapModalClickHandler = (event) => {
@@ -24,6 +86,8 @@ function HomePage() {
     setIsMapOpen(true);
     smallerDiv1.current.classList.add(classes.modalOpen);
     event.stopPropagation();
+    smallerDiv1.current.style.position = "absolute";
+    smallerDiv2.current.style.position = "absolute";
   };
 
   const bioModalClickHandler = (event) => {
@@ -31,18 +95,25 @@ function HomePage() {
     setIsBioOpen(true);
     smallerDiv2.current.classList.add(classes.modalOpen);
     event.stopPropagation();
+    smallerDiv1.current.style.position = "absolute";
+    smallerDiv2.current.style.position = "absolute";
   };
 
   const backdropClickHandler = () => {
-    smallerDiv1.current.classList.remove(classes.modalOpen);
-    smallerDiv2.current.classList.remove(classes.modalOpen);
-    closeAllModals()
+    closeAllModals();
   };
 
-  const deskopViewClickHandler = (event) => {
+  const BackdropOrScrollCondition =
+    isMapOpen ||
+    isBioOpen ||
+    isFirstCircleOpen ||
+    isSecondCircleOpen ||
+    isThirdCircleOpen;
+
+  const desktopViewClickHandler = (event) => {
     event.stopPropagation();
 
-    if (isMapOpen || isBioOpen) {
+    if (BackdropOrScrollCondition) {
       backdropClickHandler();
     } else {
       scrollToTop();
@@ -50,24 +121,11 @@ function HomePage() {
   };
 
   const modalDivClickHandler = (event) => {
-    if (isMapOpen || isBioOpen){
-      backdropClickHandler()
+    if (BackdropOrScrollCondition) {
+      backdropClickHandler();
+    } else {
+      event.stopPropagation();
     }
-    else{
-      event.stopPropagation()
-    }
-  }
-  
-
-  // const [isAtTheTop, setIsAtTheTop] = useState(true);
-  // const [isAtTheBottom, setIsAtTheBottom] = useState(false);
-
-  const onSubmitNewsletter = (event) => {
-    event.preventDefault();
-    console.log(
-      "added email to the newsletter: " + currentNewsletterInputValue
-    );
-    setCurrentNewsletterInputValue("");
   };
 
   const onChangeNewsletter = (event) => {
@@ -78,39 +136,34 @@ function HomePage() {
     window.scrollTo(0, 0);
   }
 
-  function scrollToBottom() {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  }
-
   return (
     <>
-      <div className={classes.homebody}>
+      <div
+        className={classes.homebody}
+        style={{
+          filter: !(window.innerWidth <= 1200)
+            ? `blur(${(0.8 * 4 - currentScrollStatus * 4) / 2}px)`
+            : "none",
+        }}
+      >
         <Slideshow />
         <div className={classes.descriptionDiv}>
           <h1>Che cosa facciamo?</h1>
           <CirclesDiv />
         </div>
-        <div className={classes.newsLetterSection}>
-          <form onSubmit={onSubmitNewsletter}>
-            <h1>Iscriviti alla nostra Newsletter</h1>
-            <input
-              type="text"
-              placeholder="Email adress"
-              name="name"
-              value={currentNewsletterInputValue}
-              onChange={onChangeNewsletter}
-              required
-            ></input>
-            <div className={classes.checkboxSection}>
-              <p>Voglio rimanere aggiornato tramite email</p>
-              <input type="checkbox" name="subscribe" required></input>
-            </div>
-            <input type="submit" value="Iscriviti"></input>
-          </form>
+        <div className={classes.chiSiamo}>
+
+        </div>
+        <div className={classes.doveSiamo}>
+
         </div>
       </div>
-      <div className={classes.desktopView} onClick={deskopViewClickHandler}>
-        <div className={classes.mouseIcon}>
+
+      <div className={classes.desktopView} onClick={desktopViewClickHandler}>
+        <div
+          className={classes.mouseIcon}
+          style={{ opacity: currentScrollStatus }}
+        >
           <div className={classes.scrollDowns}>
             <div className={classes.mousey}>
               <div className={classes.scroller}></div>
@@ -121,8 +174,20 @@ function HomePage() {
         <div className={classes.modalDiv} onClick={modalDivClickHandler}>
           <SocialNav />
           <div className={classes.modalContent}>
-            <CirclesDiv />
+            <CirclesDiv
+              onClick={circlesDivClickHandler}
+              hideArrows={needArrowsToBeHided}
+            />
             <div className={classes.smallerDivs}>
+              <div
+                className={classes.circleDivModal}
+                ref={circleDivModal}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {isFirstCircleOpen && <div>1 paragrafo</div>}
+                {isSecondCircleOpen && <div>2 paragrafo</div>}
+                {isThirdCircleOpen && <div>3 paragrafo </div>}
+              </div>
               <div
                 className={classes.smallerDiv1}
                 ref={smallerDiv1}
@@ -160,31 +225,6 @@ function HomePage() {
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                       sed do eiusmod tempor incididunt ut labore et dolore magna
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco lorem ipsum dolor sit amet, consectetur adipiscing
-                      elit, sed do eiusmod tempor incididunt ut labore et dolore
-                      magna aliqua. Ut enim ad minim veniam, quis nostrud
-                      exercitation ullamco lorem ipsum dolor sit amet,
-                      consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim veniamLorem ipsum dolor sit amet, consectetur
-                      adipiscing elit, sed do eiusmod tempor incididunt ut
-                      labore et dolore magna aliqua. Ut enim ad minim veniam,
-                      quis nostrud exercitation ullamco lorem ipsum dolor sit
-                      amet, consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim veniam, quis nostrud exercitation ullamco lorem
-                      ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniamLorem ipsum dolor sit amet,
-                      consectetur adipiscing elit, sed do eiusmod tempor
-                      incididunt ut labore et dolore magna aliqua. Ut enim ad
-                      minim veniam, quis nostrud exercitation ullamco lorem
-                      ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                      eiusmod tempor incididunt ut labore et dolore magna
-                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                      ullamco lorem ipsum dolor sit amet, consectetur adipiscing
-                      elit, sed do eiusmod tempor incididunt ut labore et dolore
-                      magna aliqua. Ut enim ad minim veniam
                     </p>
                   </div>
                 ) : (
@@ -196,8 +236,15 @@ function HomePage() {
               </div>
             </div>
           </div>
+
           <div className={classes.desktopFooter}>
-            Studio ingegneria Caldarigi
+            <div className={classes.elementFooterName}>+39 328 178 9139</div>
+            <div className={classes.elementFooterName}>
+              Studio ingegneria Caldarigi® 2023
+            </div>
+            <div className={classes.elementFooterName}>
+              caldarigic@gmail.com
+            </div>
           </div>
         </div>
       </div>

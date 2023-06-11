@@ -1,23 +1,32 @@
 import classes from "./MainHeader.module.css";
 import { Link } from "react-router-dom";
-import { NavLink } from "react-router-dom";
 import SocialNav from "./SocialNav";
-import { useEffect, useRef } from "react";
+import { useEffect, useState } from "react";
 
 function MainHeader(props) {
+  const [isButtonJustClicked, setIsButtonJustClicked] = useState(false);
+
   const onMenuClickHandler = () => {
     props.onMenuButtonClick();
   };
 
+  useEffect(() => {
+    setTimeout(() => setIsButtonJustClicked(false), 1100);
+  }, [isButtonJustClicked]);
+
   function scrollToTop() {
-    window.scrollTo(0, 0);
+    if (!isButtonJustClicked) {
+      window.scrollTo(0, 0);
+      setIsButtonJustClicked(true);
+    }
   }
 
   function scrollToBottom() {
-    window.scrollTo(0, window.innerHeight);
+    if (!isButtonJustClicked) {
+      window.scrollTo(0, window.innerHeight);
+      setIsButtonJustClicked(true);
+    }
   }
-
-
 
   return (
     <>

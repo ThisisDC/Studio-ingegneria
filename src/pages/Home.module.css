@@ -125,14 +125,23 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffffffc6;
+    background-color: #ffffff;
+
     padding: 30px 30px;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: background-color 0.4s ease-out;
+  }
+
+  .mouseIcon p {
+    color: #403f3fe5;
+    font-weight: bold;
   }
 
   .modalContent {
+    margin-top: 10px;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,11 +149,11 @@ p {
   }
 
   .modalDiv {
-    background-color: #ffffffc0;
+    background-color: #5b5a5a86;
     width: 65%;
     max-width: 1060px;
     height: 80vw;
-    max-height: 805px;
+    max-height: 765px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     display: flex;
@@ -164,55 +173,54 @@ p {
     align-items: center;
   }
 
-  .smallerDivs div {
+  .smallerDiv1,
+  .smallerDiv2 {
+    width: 50%;
+    height: 50%;
     padding: 1rem;
-    background-color: #ffffff43;
+    background-color: #ffffffe2;
     padding: 0;
-    display: flex;
-    flex: 1;
     border-radius: 50px;
-    width: 0%;
-    height: 0%;
     min-height: 379px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     overflow: hidden;
-    transition: all 0.3s ease-out;
-  }
-
-  .smallerDivs div:hover {
-    flex: 1.2;
-    background-color: #ffffffe2;
-
-  }
-
-  .smallerDiv2{
-    width: -100%;
-    height: -100%;
-    bottom: 0;
-    right: 0;
-  }
-
-  .smallerDiv2.modalOpen{
-    
-  }
-
-  .smallerDivs div.modalOpen {
-    z-index: 1;
-    height: 96%;
-    width: 82%;
-    position: absolute;
-    bottom: 0;
-    background-color: #ffffffe2;
-    transition: all 0.3s ease-out;
-    left: 9%;
+    transition: all 0.2s ease-out;
   }
 
   .smallerDiv1 {
-    margin-right: 0.5rem;
+    margin-right: 5px;
   }
 
   .smallerDiv2 {
-    margin-left: 0.5rem;
+    margin-left: 5px;
+  }
+
+  .smallerDiv1:hover,
+  .smallerDiv2:hover {
+    width: 70%;
+    background-color: #ffffff;
+  }
+
+  .smallerDiv1.modalOpen {
+    background-color: #ffffffed;
+  }
+
+  .modalOpen {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .smallerDiv1.modalOpen,
+  .smallerDiv2.modalOpen {
+    z-index: 1;
+    height: 100%;
+    width: 97%;
+    bottom: 0;
+    background-color: #ffffff;
+
+    transition: all 0.2s ease-out;
   }
 
   .positionPreview {
@@ -279,6 +287,33 @@ p {
     flex-direction: column;
   }
 
+  .circleDivModals {
+    position: absolute;
+    background-color: #ffffff;
+    width: 79%;
+    height: 59%;
+    border-radius: 50px;
+  }
+
+  .circleDivModal.modalOpen {
+    position: absolute;
+    background-color: #ffffff;
+    width: 79%;
+    height: 59%;
+    border-radius: 50px;
+    animation: divVisible 0.2s ease-out;
+    text-align: center;
+  }
+
+  @keyframes divVisible {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   .desktopFooter {
     display: flex;
     justify-content: center;
@@ -288,15 +323,28 @@ p {
     width: auto;
     background-color: #44c205;
     margin: auto;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.7rem;
     padding: 0.5rem 1rem;
     border-radius: 50px;
     background-color: rgb(33, 33, 33);
     transition: width 1s ease-out;
   }
 
-  .desktopFooter .visible {
+  .elementFooterName {
+    padding: 3px 7px;
+    border-radius: 6px;
+    transition: all 0.2s ease-out;
+  }
+
+  .elementFooterName:hover {
+    background-color: #3d3d3d;
+  }
+
+  .desktopFooter div {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-radius: 50px;
   }
 
   .desktopFooter .scroll-downs {

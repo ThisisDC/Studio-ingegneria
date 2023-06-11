@@ -35,15 +35,15 @@ function HeaderMenu(props) {
               &#x2715;
             </div>
             <ul className={classes.list} ref={ul}>
-              <NavLink to="/" onClick={onNavCloseRequest}>
-                <li>PROGETTI</li>
-              </NavLink>
-              <NavLink to="progetti" onClick={onNavCloseRequest}>
-                <li>CHI SIAMO</li>
-              </NavLink>
-              <NavLink to="chi-siamo" onClick={onNavCloseRequest}>
-                <li>DOVE SIAMO</li>
-              </NavLink>
+            <li to="chi-siamo" onClick={onNavCloseRequest}>
+              CHE COSA FACCIAMO?
+             </li>
+              <li to="progetti" onClick={onNavCloseRequest}>
+                CHI SIAMO
+              </li>
+              <li to="chi-siamo" onClick={onNavCloseRequest}>
+                DOVE SIAMO
+              </li>
             </ul>
           </motion.nav>
         </>

@@ -17,19 +17,7 @@ function App() {
         {
           index: true,
           element: <HomePage/>
-        },
-        {
-          path: 'chi-siamo',
-          element: <InfoPage/>
-        },
-        {
-          path: 'dove-siamo',
-          element: <InfoPage/>
-        },
-        {
-          path: 'progetti',
-          element: <ProjectsPage/>
-        },
+        }
       ]
     }
   ]);

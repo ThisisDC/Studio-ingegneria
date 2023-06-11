@@ -21,16 +21,18 @@
 .list {
   user-select: none;
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .list li {
   text-align: end;
-  margin-top: 20px;
-  margin-right: 3.5rem;
   font-size: 1.2rem;
-  color: rgb(26, 26, 26);
+  margin-right: 1rem;
+  margin-bottom: 1rem;
   padding: 5px;
-
+  color: rgb(26, 26, 26);
+  width: 10rem;
 }
 
 .list li:hover {
