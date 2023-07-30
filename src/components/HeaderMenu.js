@@ -8,9 +8,21 @@ function HeaderMenu(props) {
   const menu = useRef();
   const ul = useRef();
 
-  function onNavCloseRequest(event) {
-    if (event.target === menu.current || event.target === ul.current) return;
-    props.onLinkClick();
+  const cheCosaFacciamo = document.getElementById("cheCosaFacciamo");
+  const chiSiamo = document.getElementById("chiSiamo");
+  const DoveSiamo = document.getElementById("doveSiamo");
+
+  function clickHandler(event, sectionId) {
+    if (!(event.target === menu.current || event.target === ul.current)) {
+      props.onLinkClick();
+      if (sectionId === "s1") {
+        cheCosaFacciamo.scrollIntoView(true);
+      } else if (sectionId === "s2") {
+        chiSiamo.scrollIntoView(true);
+      } else if (sectionId === "s3") {
+        DoveSiamo.scrollIntoView(true);
+      }
+    }
   }
 
   return (
@@ -19,7 +31,7 @@ function HeaderMenu(props) {
         <>
           <motion.div
             className={classes.backdrop}
-            onClick={onNavCloseRequest}
+            onClick={clickHandler}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -31,19 +43,15 @@ function HeaderMenu(props) {
             animate={{ opacity: 1, translateX: "0" }}
             exit={{ opacity: 0, translateX: "-100%" }}
           >
-            <div className={classes.x} onClick={onNavCloseRequest}>
+            <div className={classes.x} onClick={clickHandler}>
               &#x2715;
             </div>
             <ul className={classes.list} ref={ul}>
-            <li to="chi-siamo" onClick={onNavCloseRequest}>
-              CHE COSA FACCIAMO?
-             </li>
-              <li to="progetti" onClick={onNavCloseRequest}>
-                CHI SIAMO
+              <li onClick={(event) => clickHandler(event, "s1")}>
+                CHE COSA FACCIAMO?
               </li>
-              <li to="chi-siamo" onClick={onNavCloseRequest}>
-                DOVE SIAMO
-              </li>
+              <li onClick={(event) => clickHandler(event, "s2")}>CHI SIAMO</li>
+              <li onClick={(event) => clickHandler(event, "s3")}>DOVE SIAMO</li>
             </ul>
           </motion.nav>
         </>

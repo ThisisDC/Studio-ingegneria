@@ -3,6 +3,7 @@
 html {
   scroll-behavior: smooth;
   user-select: none;
+
 }
 
 img {
@@ -15,8 +16,10 @@ body {
   width: 100%;
 }
 
-body::-webkit-scrollbar {
-  display: none;
+@media (min-width: 1200px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 * {

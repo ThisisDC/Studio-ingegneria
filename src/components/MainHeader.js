@@ -28,6 +28,23 @@ function MainHeader(props) {
     }
   }
 
+  useEffect(() => {
+    const header = document.getElementsByTagName("header")[0];
+    let prevScrollPos = window.scrollY;
+    window.addEventListener("scroll", () => {
+      let currentScrollPos = window.scrollY;
+      if (prevScrollPos - currentScrollPos > 1000) {
+        if (prevScrollPos > currentScrollPos) {
+          header.style.top = "0px";
+        } else {
+          header.style.top = "-75px";
+        }
+        prevScrollPos = currentScrollPos;
+      }
+    });
+  }, []);
+  ///////////////////////////////////////
+
   return (
     <>
       <div className={classes.contactsnav}>

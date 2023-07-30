@@ -8,6 +8,7 @@
   border-radius: 50px;
   margin: 2rem;
   background-color: none;
+  align-items: center;
 }
 
 .section {
@@ -52,7 +53,6 @@
 }
 
 .circleDesc {
-  width: 12rem;
   text-align: center;
   margin: auto;
   margin-bottom: 2rem;
@@ -62,14 +62,17 @@
   color: black;
   font-weight: 500;
   padding: 0.5rem;
+  max-width: 240px;
   border-radius: 7px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-left: 10px;
 }
 
 @media (min-width: 800px) {
   .circlesDiv {
     flex-direction: row;
     background-color: #efefef;
+    align-items: flex-start;
   }
 
   .circle {
@@ -133,13 +136,11 @@
     border-right: 50px solid transparent;
     border-bottom: 50px solid green;
     margin: 0rem;
-    bottom: -55px;
+    bottom: -47px;
     z-index: 1;
     opacity: 0;
     border-radius: 0px;
   }
-
-
 
   .triangle.visible {
     opacity: 1;
@@ -157,6 +158,4 @@
   .triangle3 {
     left: 22%;
   }
-
- 
 }
