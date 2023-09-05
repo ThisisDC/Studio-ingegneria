@@ -1,14 +1,17 @@
-import { RouterProvider, createHashRouter } from 'react-router-dom';
-import HomePage from './pages/Home';
-import ErrorPage from './pages/Error';
-import RootLayout from './pages/Root';
-import InfoPage from './pages/Info';
-import ProjectsPage from './pages/Projects';
-
+import {
+  RouterProvider,
+  // createHashRouter, use it for github and add this for in package.json --> "homepage": "https://thisisdc.github.io/Studio-ingegneria",
+  createBrowserRouter,
+} from "react-router-dom";
+import HomePage from "./pages/Home";
+import ErrorPage from "./pages/Error";
+import RootLayout from "./pages/Root";
+// import InfoPage from "./pages/Info";
+// import ProjectsPage from "./pages/Projects";
 
 function App() {
   //use createHashRouter for github!
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <RootLayout />,
@@ -16,12 +19,12 @@ function App() {
       children: [
         {
           index: true,
-          element: <HomePage/>
-        }
-      ]
-    }
+          element: <HomePage />,
+        },
+      ],
+    },
   ]);
-  return <RouterProvider router={router}/>
+  return <RouterProvider router={router} />;
 }
 
 export default App;

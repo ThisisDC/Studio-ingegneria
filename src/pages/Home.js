@@ -1,13 +1,10 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import classes from "./Home.module.css";
 import Slideshow from "../components/Slideshow";
 import SocialNav from "../components/SocialNav";
 import CirclesDiv from "../components/CirclesDiv";
 
-function HomePage() {
-  const [currentNewsletterInputValue, setCurrentNewsletterInputValue] =
-    useState("");
-
+function HomePage({ imagesLoaded }) {
   // mobile
 
   const cheCosaFacciamoDiv = useRef();
@@ -24,37 +21,12 @@ function HomePage() {
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isBioOpen, setIsBioOpen] = useState(false);
 
-  const [currentScrollStatus, setcurrentScrollStatus] = useState(0.8);
-
   const circleDivModal = useRef();
   const smallerDiv1 = useRef();
   const smallerDiv2 = useRef();
 
-  useEffect(() => {
-    window.addEventListener("scroll", scrollHandler);
-  }, []);
-
-  function scrollHandler() {
-    if (!(window.innerWidth <= 1200)) {
-      let h = document.documentElement,
-        b = document.body,
-        st = "scrollTop",
-        sh = "scrollHeight";
-      let scrollValue =
-        0.8 - (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight);
-
-      getScrollPercent(scrollValue);
-    } else {
-      getScrollPercent(0.8);
-    }
-  }
-
-  function getScrollPercent(opacityValue) {
-    setcurrentScrollStatus(() => opacityValue);
-  }
-
   function askToHideAllTheArrows() {
-    setNeedArrowsToBeHided(Math.random());
+    setNeedArrowsToBeHided((oldState) => !oldState);
   }
 
   const closeAllModals = () => {
@@ -142,15 +114,8 @@ function HomePage() {
 
   return (
     <>
-      <div
-        className={classes.homebody}
-        style={{
-          filter: !(window.innerWidth <= 1200)
-            ? `blur(${(0.8 * 4 - currentScrollStatus * 4) / 2}px)`
-            : "none",
-        }}
-      >
-        <Slideshow />
+      <div className={classes.homebody}>
+        <Slideshow imagesLoaded={imagesLoaded} />
         <div
           className={classes.descriptionDiv}
           ref={cheCosaFacciamoDiv}
@@ -185,16 +150,13 @@ function HomePage() {
       </div>
 
       <div className={classes.desktopView} onClick={desktopViewClickHandler}>
-        <div
-          className={classes.mouseIcon}
-          style={{ opacity: currentScrollStatus }}
-        >
+        <div className={classes.mouseIcon}>
           <div className={classes.scrollDowns}>
             <div className={classes.mousey}>
               <div className={classes.scroller}></div>
             </div>
           </div>
-          <p>Scorri in basso!</p>
+          <p>Scorri in basso</p>
         </div>
         <div className={classes.modalDiv} onClick={modalDivClickHandler}>
           <SocialNav />
@@ -286,12 +248,6 @@ function HomePage() {
               >
                 {isMapOpen ? (
                   <>
-                    <span
-                      class="material-symbols-outlined"
-                      onClick={closeAllModals}
-                    >
-                      cancel
-                    </span>
                     <iframe
                       title="map"
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.174240661532!2d12.941854312631982!3d43.60291357098421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132da8df71cc98a1%3A0x93120a7b1b181cd4!2sSTUDIO%20INGEGNERIA%20CALDARIGI%20CLAUDIO!5e0!3m2!1sit!2sit!4v1686069705582!5m2!1sit!2sit"

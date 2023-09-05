@@ -56,8 +56,7 @@
   flex-direction: column;
   margin-top: 1rem;
   text-align: center;
-  margin-right: 2rem;
-  margin-left: 2rem;
+  margin: 2rem;
   align-items: center;
 }
 
@@ -122,14 +121,14 @@
     position: relative;
     display: flex;
   }
-  
+
   .imageFrame {
     position: relative;
     height: 100%;
     width: 100%;
     min-height: 300px;
   }
-  
+
   .imagecontainer {
     display: flex;
     background-repeat: no-repeat;

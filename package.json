@@ -1,10 +1,6 @@
 {
   "name": "template",
   "version": "0.1.0",
-  "reactSnap": {
-    "inlineCss": true
-  },
-  "homepage": "https://thisisdc.github.io/Studio-ingegneria",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
