@@ -382,6 +382,70 @@ p {
       opacity: 1;
     }
   }
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .closeButton {
+    background-color: rgb(43, 43, 43);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 4%;
+    bottom: 0;
+    width: 100px;
+    height: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .visible {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+  }
+
+  .arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    /*   border:solid 1px white; */
+    transition: 0.5s;
+    overflow: hidden;
+  }
+
+  .arrow:after {
+    position: absolute;
+    display: block;
+    content: "";
+    color: white;
+    width: 20px;
+    height: 15px;
+    /*   border:solid 1px;  */
+    top: -1px;
+    border-bottom: solid 2px;
+    transform: translatex(4px);
+  }
+
+  .arrow:before {
+    position: absolute;
+    display: block;
+    content: "";
+    color: white;
+    width: 8px;
+    height: 8px;
+    /*   border:solid 1px;  */
+    border-top: solid 2px;
+    border-left: solid 2px;
+    top: 50%;
+    left: 2px;
+    transform-origin: 0% 0%;
+    transform: rotatez(-45deg);
+  }
 
   .desktopFooter {
     display: flex;

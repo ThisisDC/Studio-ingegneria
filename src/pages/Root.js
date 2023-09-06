@@ -1,27 +1,31 @@
 import MainHeader from "../components/MainHeader";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
-import { useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import HeaderMenu from "../components/HeaderMenu";
 import LoadingOverlay from "../components/LoadingOverlay";
+import { useContext } from "react";
+import { globalContext } from "../App";
 
 function RootLayout() {
-  const [isLoading, setIsLoading] = useState(true);
+  const context = useContext(globalContext);
+  const [timerCompleted, setTimerCompleted] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setTimerCompleted(true), 2000);
+  }, []);
+
   const [isNavBarOpen, setIsNavBarOpen] = useState(false);
 
   const onMenuClickHandler = () => {
     setIsNavBarOpen(!isNavBarOpen);
   };
 
-  const animationEndedHandler = () => {
-    setIsLoading(false);
-  };
+  const isAppReady = context.value.ready && timerCompleted;
+
   return (
     <>
-      <LoadingOverlay
-        isLoading={isLoading}
-        setAnimationEnded={animationEndedHandler}
-      />
+      <LoadingOverlay isAppReady={isAppReady} />
       <HeaderMenu onLinkClick={onMenuClickHandler} isNavOpen={isNavBarOpen} />
       <MainHeader
         onMenuButtonClick={onMenuClickHandler}

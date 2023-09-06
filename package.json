@@ -41,7 +41,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
-    "react-snap": "^1.23.0"
+    "gh-pages": "^5.0.0"
   }
 }

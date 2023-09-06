@@ -1,74 +1,105 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import classes from "./Slideshow.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import useIsMobile from "../util/useIsMobile";
+import image1 from "../images/pale-eoliche.png";
+import image2 from "../images/pompa-di-calore.jpg";
+import image3 from "../images/dji_fly_20230521_182050_12_1684686059162_photo_optimized.jpg";
+import { useContext } from "react";
+import { globalContext } from "../App";
 
-export default function Slideshow({ imagesLoaded }) {
-  const [areImagesLoaded, setAreImagesLoaded] = useState({
-    image1: false,
-    image2: false,
-    image3: false,
-  });
+const images = [
+  {
+    url: image1,
+  },
+  {
+    url: image2,
+  },
+  {
+    url: image3,
+  },
+];
 
-  function setImageLoaded(imageId) {
-    const newState = [...areImagesLoaded];
-    newState[imageId] = true;
-    setAreImagesLoaded(newState);
-    if (
-      areImagesLoaded.image1 &&
-      areImagesLoaded.image2 &&
-      areImagesLoaded.image3
-    ) {
-      imagesLoaded();
+export default function Slideshow() {
+  const context = useContext(globalContext);
+
+  const [imgsLoaded, setImgsLoaded] = useState(false);
+
+  const setAppReady = useCallback(() => {
+    context.setAppReady();
+  }, []);
+
+  useEffect(() => {
+    if (imgsLoaded) {
+      setAppReady();
     }
-  }
+  }, [imgsLoaded, setAppReady]);
 
-  const slides = [
-    <div
+  useEffect(() => {
+    const loadImage = (image) => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = image.url;
+        // wait 2 seconds to simulate loading time
+        loadImg.onload = () => resolve(image.url);
+
+        loadImg.onerror = (err) => reject(err);
+      });
+    };
+
+    Promise.all(images.map((image) => loadImage(image)))
+      .then(() => setImgsLoaded(true))
+      .catch((err) => console.log("Failed to load images", err));
+  }, []);
+
+  const slides = images.map((image, idx) => (
+    <img
       className={classes.imagecontainer}
-      id={classes.slide0}
-      onLoad={() => setImageLoaded("image1")}
-    ></div>,
-    <div
-      className={classes.imagecontainer}
-      id={classes.slide1}
-      onLoad={() => setImageLoaded("image2")}
-    ></div>,
-    <div
-      className={classes.imagecontainer}
-      id={classes.slide2}
-      onLoad={() => setImageLoaded("image3")}
-    ></div>,
-  ];
+      key={idx}
+      alt={idx}
+      src={image.url}
+    ></img>
+  ));
+
+  const isMobile = useIsMobile();
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // setSeconds((seconds) => seconds + 1);
       if (0 <= currentSlide && currentSlide < 2) {
         setCurrentSlide(currentSlide + 1);
       } else {
         setCurrentSlide(0);
       }
-    }, 4000);
+    }, 5000);
     return () => clearInterval(interval);
   }, [currentSlide]);
-
-  // const MoreButtonClickHandler = () => {};
 
   return (
     <div className={classes.slideShow}>
       <div className={classes.imageFrame}>
         <AnimatePresence mode="popLayout">
           <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "-100%" }}
             className={classes.imageFrame}
             key={currentSlide}
-            transition={{
-              x: { duration: 1.5 },
-            }}
+            initial={isMobile ? { x: "100%" } : { opacity: 0 }}
+            animate={
+              isMobile
+                ? { x: 0 }
+                : {
+                    opacity: 1,
+                    transition: { duration: 2, ease: "easeOut" },
+                  }
+            }
+            exit={isMobile ? { x: "-100%" } : { opacity: 0 }}
+            transition={
+              isMobile && {
+                x: { type: "spring", stiffness: 150, damping: 20 },
+                opacity: { duration: 0.2 },
+              }
+            }
           >
             {slides[currentSlide]}
           </motion.div>

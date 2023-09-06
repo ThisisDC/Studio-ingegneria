@@ -6,10 +6,24 @@ import {
 import HomePage from "./pages/Home";
 import ErrorPage from "./pages/Error";
 import RootLayout from "./pages/Root";
+import {
+  createContext,
+  useCallback,
+  useState,
+  useMemo,
+  useEffect,
+} from "react";
 // import InfoPage from "./pages/Info";
 // import ProjectsPage from "./pages/Projects";
 
+export const globalContext = createContext();
+
 function App() {
+  const [value, setValue] = useState({ ready: false });
+  const setAppReady = useCallback(() => {
+    setValue((oldState) => ({ ...oldState, ready: true }));
+  }, []);
+
   //use createHashRouter for github!
   const router = createBrowserRouter([
     {
@@ -24,7 +38,19 @@ function App() {
       ],
     },
   ]);
-  return <RouterProvider router={router} />;
+
+  const contextValue = useMemo(
+    () => ({
+      value,
+      setAppReady,
+    }),
+    [value, setAppReady]
+  );
+  return (
+    <globalContext.Provider value={contextValue}>
+      <RouterProvider router={router} />
+    </globalContext.Provider>
+  );
 }
 
 export default App;

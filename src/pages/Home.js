@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import classes from "./Home.module.css";
 import Slideshow from "../components/Slideshow";
 import SocialNav from "../components/SocialNav";
@@ -16,7 +16,7 @@ function HomePage({ imagesLoaded }) {
   const [isFirstCircleOpen, setIsFirstCircleOpen] = useState(false);
   const [isSecondCircleOpen, setIsSecondCircleOpen] = useState(false);
   const [isThirdCircleOpen, setIsThirdCircleOpen] = useState(false);
-  const [needArrowsToBeHided, setNeedArrowsToBeHided] = useState(false);
+  const [needArrowsToBeHided, setNeedArrowsToBeHided] = useState(0);
 
   const [isMapOpen, setIsMapOpen] = useState(false);
   const [isBioOpen, setIsBioOpen] = useState(false);
@@ -24,9 +24,18 @@ function HomePage({ imagesLoaded }) {
   const circleDivModal = useRef();
   const smallerDiv1 = useRef();
   const smallerDiv2 = useRef();
+  const backButton = useRef();
+
+  function showBackButton() {
+    backButton.current.classList.add(classes.visible);
+  }
+
+  function hideBackButton() {
+    backButton.current.classList.remove(classes.visible);
+  }
 
   function askToHideAllTheArrows() {
-    setNeedArrowsToBeHided((oldState) => !oldState);
+    setNeedArrowsToBeHided((oldState) => (oldState += 1));
   }
 
   const closeAllModals = () => {
@@ -42,6 +51,7 @@ function HomePage({ imagesLoaded }) {
     smallerDiv2.current.classList.remove(classes.modalOpen);
     smallerDiv2.current.style.position = "static";
     smallerDiv1.current.style.position = "static";
+    hideBackButton();
   };
 
   const circlesDivClickHandler = (circleClicked) => {
@@ -64,6 +74,7 @@ function HomePage({ imagesLoaded }) {
   const mapModalClickHandler = (event) => {
     setIsBioOpen(false);
     setIsMapOpen(true);
+    showBackButton();
     smallerDiv1.current.classList.add(classes.modalOpen);
     event.stopPropagation();
     smallerDiv1.current.style.position = "absolute";
@@ -73,6 +84,7 @@ function HomePage({ imagesLoaded }) {
   const bioModalClickHandler = (event) => {
     setIsMapOpen(false);
     setIsBioOpen(true);
+    showBackButton();
     smallerDiv2.current.classList.add(classes.modalOpen);
     event.stopPropagation();
     smallerDiv1.current.style.position = "absolute";
@@ -159,7 +171,17 @@ function HomePage({ imagesLoaded }) {
           <p>Scorri in basso</p>
         </div>
         <div className={classes.modalDiv} onClick={modalDivClickHandler}>
-          <SocialNav />
+          <div className={classes.header}>
+            <div
+              ref={backButton}
+              className={classes.closeButton}
+              onClick={closeAllModals}
+            >
+              <div className={classes.arrow}></div>
+            </div>
+
+            <SocialNav />
+          </div>
           <div className={classes.modalContent}>
             <CirclesDiv
               onClick={circlesDivClickHandler}

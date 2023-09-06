@@ -1,6 +1,4 @@
 #slide0 {
-  background-image: url("../images/pannelli.png");
-
   background-image: url("../images/dji_fly_20230521_182050_12_1684686059162_photo_optimized.jpg");
 }
 
@@ -37,6 +35,8 @@
   height: 62.9vw;
   align-items: flex-end;
   width: 100%;
+  border-radius: 0;
+  margin-left: 0;
 }
 
 .paragraph {

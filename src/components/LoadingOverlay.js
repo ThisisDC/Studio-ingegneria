@@ -1,19 +1,26 @@
 import classes from "./LoadingOverlay.module.css";
-import { motion } from "framer-motion";
+import { motion, useAnimationControls } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const LoadingOverlay = (props) => {
-  const handleAnimationComplete = () => {
-    props.setAnimationEnded();
-  };
+  const controls = useAnimationControls();
+
+  const [showOverlay, setShowOverlay] = useState(true);
+
+  useEffect(() => {
+    if (props.isAppReady) {
+      controls.start({ opacity: 0, transition: { duration: 1 } });
+      setTimeout(() => setShowOverlay(false), 1000);
+    }
+  }, [props.isAppReady, controls]);
 
   return (
-    props.isLoading && (
+    showOverlay && (
       <motion.div
         className={classes.overlay}
         initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
+        animate={controls}
         transition={{ delay: 1.5, duration: 0.5 }}
-        onAnimationComplete={handleAnimationComplete}
       >
         <div className={classes.block}>
           <div className={classes.logo}>
