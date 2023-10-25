@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/Studio-ingegneria/static/css/main.2328f2cc.css",
-    "main.js": "/Studio-ingegneria/static/js/main.e3868701.js",
-    "static/media/pannelli.png": "/Studio-ingegneria/static/media/pannelli.1059900d6e174baedda7.png",
-    "static/media/dji_fly_20230521_182050_12_1684686059162_photo_optimized.jpg": "/Studio-ingegneria/static/media/dji_fly_20230521_182050_12_1684686059162_photo_optimized.dfdccd18bdab6bf86b78.jpg",
-    "static/media/pale-eoliche.png": "/Studio-ingegneria/static/media/pale-eoliche.cac9680cbfddc68fd9c9.png",
-    "static/media/pompa-di-calore.jpg": "/Studio-ingegneria/static/media/pompa-di-calore.551979c25f734cee874d.jpg",
-    "static/media/descimg1.png": "/Studio-ingegneria/static/media/descimg1.c5cae53e891fbb225010.png",
-    "static/media/descimg2.png": "/Studio-ingegneria/static/media/descimg2.28838d4baa5ec8cf16f9.png",
-    "static/media/descimg3.png": "/Studio-ingegneria/static/media/descimg3.eea4977817bee7fcd48b.png",
-    "static/media/logo.png": "/Studio-ingegneria/static/media/logo.bd716ecbf95bc1e0bc17.png",
-    "index.html": "/Studio-ingegneria/index.html",
-    "main.2328f2cc.css.map": "/Studio-ingegneria/static/css/main.2328f2cc.css.map",
-    "main.e3868701.js.map": "/Studio-ingegneria/static/js/main.e3868701.js.map"
+    "main.css": "/static/css/main.326c50af.css",
+    "main.js": "/static/js/main.2de0964b.js",
+    "static/media/dji_fly_20230521_182050_12_1684686059162_photo_optimized.jpg": "/static/media/dji_fly_20230521_182050_12_1684686059162_photo_optimized.dfdccd18bdab6bf86b78.jpg",
+    "static/media/pale-eoliche.png": "/static/media/pale-eoliche.cac9680cbfddc68fd9c9.png",
+    "static/media/pompa-di-calore.jpg": "/static/media/pompa-di-calore.551979c25f734cee874d.jpg",
+    "static/media/descimg1.png": "/static/media/descimg1.c5cae53e891fbb225010.png",
+    "static/media/descimg2.png": "/static/media/descimg2.28838d4baa5ec8cf16f9.png",
+    "static/media/descimg3.png": "/static/media/descimg3.eea4977817bee7fcd48b.png",
+    "static/media/logo.png": "/static/media/logo.bd716ecbf95bc1e0bc17.png",
+    "index.html": "/index.html",
+    "main.326c50af.css.map": "/static/css/main.326c50af.css.map",
+    "main.2de0964b.js.map": "/static/js/main.2de0964b.js.map"
   },
   "entrypoints": [
-    "static/css/main.2328f2cc.css",
-    "static/js/main.e3868701.js"
+    "static/css/main.326c50af.css",
+    "static/js/main.2de0964b.js"
   ]
 }
